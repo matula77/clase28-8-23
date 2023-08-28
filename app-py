@@ -1,0 +1,13 @@
+from flask import Flask
+
+def init_app():
+        
+    app = Flask(__name__)
+    @app.route('/')
+    def hello_world():
+        return 'Hola Mundo!'
+    @app.route ('/about')
+    def hello_world():
+        return'Acerca de Nosotros'
+    
+    return app
